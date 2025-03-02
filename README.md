@@ -15,15 +15,15 @@ Prefer is an innovative travel application designed to revolutionize how people 
 
 ---
 
-## 🚀 Technology Stack
+## 🚀 Tech Stack
 
-- **Frontend:** React Native
-- **Backend:** Node.js with Express
-- **Database:** MongoDB
+- **Frontend:** React + TypeScript and TailwindCSS
+- **Backend:** Node.js
+- **Database:** Firestore
 - **Authentication:** Firebase Authentication
-- **State Management:** Redux
 - **Mapping:** Google Maps API
-- **Recommendation Engine:** Custom AI/ML algorithm
+- **Recommendation Engine:** OpenAI LLMs
+- **Playlist Creation:** Spotify API
 
 ---
 
@@ -37,7 +37,6 @@ Check out our live demo at [https://prefer.travel](https://prefer.travel)
 
 - Node.js (v18+)
 - npm or Yarn
-- MongoDB
 - Firebase Account
 - Google Cloud Platform Account
 
@@ -71,35 +70,7 @@ Check out our live demo at [https://prefer.travel](https://prefer.travel)
 
 ---
 
-## 🧪 Testing
-
-Run unit and integration tests with:
-```bash
-npm run test
-```
-
----
-
-## 🤝 Contributing
-
-1. Fork the repository.
-2. Create your feature branch:
-   ```bash
-   git checkout -b feature/amazing-feature
-   ```
-3. Commit your changes:
-   ```bash
-   git commit -m 'Add some amazing feature'
-   ```
-4. Push to the branch:
-   ```bash
-   git push origin feature/amazing-feature
-   ```
-5. Open a Pull Request.
-
----
-
 ## 📄 License
 
 Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
-```
+
