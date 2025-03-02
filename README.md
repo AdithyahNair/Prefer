@@ -1,6 +1,6 @@
-# Prefer: Personalized Travel, Perfected
+# Prefer Solo: Personalized Travel, Perfected
 
-Prefer is an innovative travel application designed to revolutionize how people plan and experience their trips. By leveraging advanced personalization algorithms and user preferences, Prefer creates tailored travel experiences that go beyond traditional planning.
+Prefer Solo is an innovative travel application designed to revolutionize how people plan and experience their trips. By leveraging advanced personalization algorithms and user preferences, Prefer creates tailored travel experiences that go beyond traditional planning.
 
 ---
 
@@ -18,8 +18,8 @@ Prefer is an innovative travel application designed to revolutionize how people 
 ## 🚀 Tech Stack
 
 - **Frontend:** React + TypeScript and TailwindCSS
-- **Backend:** Node.js
-- **Database:** Firestore
+- **Backend:** Firebase
+- ""Database:** Firestore
 - **Authentication:** Firebase Authentication
 - **Mapping:** Google Maps API
 - **Recommendation Engine:** OpenAI LLMs
@@ -29,7 +29,7 @@ Prefer is an innovative travel application designed to revolutionize how people 
 
 ## 🔗 Live Demo
 
-Check out our live demo at [https://prefer.travel](https://prefer.travel)
+[https://prefer-solo.netlify.app/](https://prefer-solo.netlify.app/)
 
 ---
 
@@ -39,6 +39,7 @@ Check out our live demo at [https://prefer.travel](https://prefer.travel)
 - npm or Yarn
 - Firebase Account
 - Google Cloud Platform Account
+- Spotify Developer Account
 
 ---
 
