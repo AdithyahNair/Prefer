@@ -32,13 +32,16 @@ const SignInForm: React.FC<SignInFormProps> = ({ onSignIn, onToggleMode }) => {
       const user = await signInWithEmail(formData.email, formData.password);
 
       if (user) {
-        const userData = {
-          uid: user.uid,
-          email: user.email,
-          authProvider: "email",
-        };
+        // Get the user data from localStorage
+        const storedUsers = localStorage.getItem("prefer_users");
+        if (storedUsers) {
+          const users = JSON.parse(storedUsers);
+          const userData = users[user.uid];
 
-        onSignIn(userData);
+          if (userData) {
+            onSignIn(userData);
+          }
+        }
       }
     } catch (error) {
       console.error("Error during sign in:", error);
@@ -54,13 +57,16 @@ const SignInForm: React.FC<SignInFormProps> = ({ onSignIn, onToggleMode }) => {
       const user = await signInWithGoogle();
 
       if (user) {
-        const userData = {
-          uid: user.uid,
-          email: user.email,
-          authProvider: "google",
-        };
+        // Get the user data from localStorage
+        const storedUsers = localStorage.getItem("prefer_users");
+        if (storedUsers) {
+          const users = JSON.parse(storedUsers);
+          const userData = users[user.uid];
 
-        onSignIn(userData);
+          if (userData) {
+            onSignIn(userData);
+          }
+        }
       }
     } catch (error) {
       console.error("Error during Google sign in:", error);
@@ -76,13 +82,16 @@ const SignInForm: React.FC<SignInFormProps> = ({ onSignIn, onToggleMode }) => {
       const user = await signInWithApple();
 
       if (user) {
-        const userData = {
-          uid: user.uid,
-          email: user.email,
-          authProvider: "apple",
-        };
+        // Get the user data from localStorage
+        const storedUsers = localStorage.getItem("prefer_users");
+        if (storedUsers) {
+          const users = JSON.parse(storedUsers);
+          const userData = users[user.uid];
 
-        onSignIn(userData);
+          if (userData) {
+            onSignIn(userData);
+          }
+        }
       }
     } catch (error) {
       console.error("Error during Apple sign in:", error);

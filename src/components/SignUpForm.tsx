@@ -31,19 +31,25 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ onSignUp, onToggleMode }) => {
     setLoading(true);
 
     try {
-      const user = await signUpWithEmail(formData.email, formData.password);
+      // Pass all user info to the signUpWithEmail function
+      const user = await signUpWithEmail(
+        formData.email,
+        formData.password,
+        formData.firstName,
+        formData.lastName
+      );
 
       if (user) {
-        const userData = {
-          uid: user.uid,
-          firstName: formData.firstName,
-          lastName: formData.lastName,
-          email: formData.email,
-          authProvider: "email",
-          createdAt: new Date().toISOString(),
-        };
+        // Get the user data from localStorage
+        const storedUsers = localStorage.getItem("prefer_users");
+        if (storedUsers) {
+          const users = JSON.parse(storedUsers);
+          const userData = users[user.uid];
 
-        onSignUp(userData);
+          if (userData) {
+            onSignUp(userData);
+          }
+        }
       }
     } catch (error) {
       console.error("Error during sign up:", error);
@@ -59,22 +65,16 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ onSignUp, onToggleMode }) => {
       const user = await signInWithGoogle();
 
       if (user) {
-        // Extract name from Google user profile
-        const displayName = user.displayName || "";
-        const nameParts = displayName.split(" ");
-        const firstName = nameParts[0] || "Google";
-        const lastName = nameParts.slice(1).join(" ") || "User";
+        // Get the user data from localStorage
+        const storedUsers = localStorage.getItem("prefer_users");
+        if (storedUsers) {
+          const users = JSON.parse(storedUsers);
+          const userData = users[user.uid];
 
-        const userData = {
-          uid: user.uid,
-          firstName,
-          lastName,
-          email: user.email,
-          authProvider: "google",
-          createdAt: new Date().toISOString(),
-        };
-
-        onSignUp(userData);
+          if (userData) {
+            onSignUp(userData);
+          }
+        }
       }
     } catch (error) {
       console.error("Error during Google sign up:", error);
@@ -90,22 +90,16 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ onSignUp, onToggleMode }) => {
       const user = await signInWithApple();
 
       if (user) {
-        // Extract name from Apple user profile if available
-        const displayName = user.displayName || "";
-        const nameParts = displayName.split(" ");
-        const firstName = nameParts[0] || "Apple";
-        const lastName = nameParts.slice(1).join(" ") || "User";
+        // Get the user data from localStorage
+        const storedUsers = localStorage.getItem("prefer_users");
+        if (storedUsers) {
+          const users = JSON.parse(storedUsers);
+          const userData = users[user.uid];
 
-        const userData = {
-          uid: user.uid,
-          firstName,
-          lastName,
-          email: user.email,
-          authProvider: "apple",
-          createdAt: new Date().toISOString(),
-        };
-
-        onSignUp(userData);
+          if (userData) {
+            onSignUp(userData);
+          }
+        }
       }
     } catch (error) {
       console.error("Error during Apple sign up:", error);
