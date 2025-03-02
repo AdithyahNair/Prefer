@@ -126,7 +126,7 @@ export const generateTravelPlans = async (params: TravelPlanParams) => {
       {
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer sk-proj-t4CUggJDi0SfTJvF4QeMT3BlbkFJLl9b1HJ8MBpOpAnJk64K`,
+          Authorization: `Bearer ${import.meta.env.VITE_REACT_OPENAI_API_KEY}`,
         },
       }
     );
