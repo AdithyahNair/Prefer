@@ -202,7 +202,9 @@ function AppContent() {
           <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white">
             <Compass size={24} />
           </div>
-          <span className="ml-2 text-xl font-medium text-blue-600">Prefer</span>
+          <span className="ml-2 text-xl font-medium text-blue-600">
+            Prefer Solo
+          </span>
         </div>
 
         {isSignUp ? (
