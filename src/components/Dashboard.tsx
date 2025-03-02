@@ -47,7 +47,7 @@ import { generateTravelPlans } from "../services/openaiService";
 import { getUserLocation, reverseGeocode } from "../services/googleMapsService";
 
 // Google Maps API key - this will be provided by the user
-const GOOGLE_MAPS_API_KEY = import.meta.env.REACT_APP_GOOGLEMAPS_API_KEY;
+const GOOGLE_MAPS_API_KEY = "AIzaSyA3Hjt9FUNgajS9h6mGKrsRt8qaZkYilas";
 interface DashboardProps {
   userData: any;
   onSignOut: () => void;
