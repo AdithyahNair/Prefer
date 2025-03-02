@@ -126,7 +126,7 @@ export const generateTravelPlans = async (params: TravelPlanParams) => {
       {
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer sk-proj-t4CUggJDi0SfTJvF4QeMT3BlbkFJLl9b1HJ8MBpOpAnJk64K`,
+          Authorization: `Bearer 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`,
         },
       }
     );

@@ -98,7 +98,7 @@ const PreferencesPage: React.FC<PreferencesPageProps> = ({
               <Compass size={24} />
             </div>
             <span className="ml-2 text-xl font-medium text-blue-600">
-              Prefer
+              Prefer Solo
             </span>
           </div>
 
