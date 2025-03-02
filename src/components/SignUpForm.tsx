@@ -113,7 +113,7 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ onSignUp, onToggleMode }) => {
       <div className="text-center mb-8">
         <h1 className="text-3xl font-bold">Hi! Welcome to</h1>
         <h1 className="text-3xl font-bold">
-          Prefer <span className="text-2xl">👋</span>
+          Prefer Solo<span className="text-2xl">👋</span>
         </h1>
       </div>
 
